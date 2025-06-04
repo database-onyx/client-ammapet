@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naidu Matrimony - Find Your Perfect Match</title>
+    <!-- Copyright Protection -->
+    <meta name="copyright" content="Copyright © 2025 Naidu Matrimony. All rights reserved. Unauthorized copying, reproduction, or distribution is strictly prohibited.">
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable text selection
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable keyboard shortcuts for developer tools and saving
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && (
+                e.key === 'u' || // View source
+                e.key === 's' || // Save
+                e.key === 'i' || // Inspect
+                e.key === 'j' || // JavaScript console
+                e.key === 'c' || // Copy
+                e.key === 'p'    // Print
+            )) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Disable F12 key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Detect and prevent Developer Tools
+        function detectDevTools() {
+            if (window.outerWidth - window.innerWidth > 160 || window.outerHeight - window.innerHeight > 160) {
+                document.body.innerHTML = 'You are not allowed to edit or view the source code of this page. restricted by developers';
+            }
+        }
+
+        setInterval(detectDevTools, 1000);
+    </script>
+    <style>
+        /* Prevent text selection */
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Hide source code from view source */
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Add CSS protection notice */
+        body::before {
+            content: "Protected by copyright law. Unauthorized use is prohibited.";
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --velvet-yellow: #F4D03F;
+            --velvet-blue: #2E4057;
+            --gradient-yellow: linear-gradient(135deg, #F4D03F 0%, #F7DC6F 100%);
+            --gradient-blue: linear-gradient(135deg, #2E4057 0%, #34495E 100%);
+        }
+        
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        
+        .bg-velvet-yellow { background-color: #F4D03F; }
+        .bg-velvet-blue { background-color: #2E4057; }
+        .text-velvet-yellow { color: #F4D03F; }
+        .text-velvet-blue { color: #2E4057; }
+        .border-velvet-yellow { border-color: #F4D03F; }
+        .border-velvet-blue { border-color: #2E4057; }
+        
+        .gradient-yellow { background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); }
+        .gradient-blue { background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%); }
+        
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #2E4057 0%, #34495E 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .logo-animation {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 1s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 1s ease-out;
+        }
+        
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(46, 64, 87, 0.9) 0%, rgba(52, 73, 94, 0.9) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="hearts" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M50,25 C35,10 15,10 15,30 C15,50 50,75 50,75 C50,75 85,50 85,30 C85,10 65,10 50,25 Z" fill="rgba(244,208,63,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23hearts)"/></svg>');
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: 
+                linear-gradient(135deg, rgba(255, 210, 0, 0.1) 0%, transparent 50%),
+                linear-gradient(45deg, rgba(51, 51, 51, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%),
+                url('./images/hero-section-1.jpg'),
+                radial-gradient(circle at 20% 80%, rgba(255, 210, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 210, 0, 0.1) 0%, transparent 50%),
+                linear-gradient(180deg, #1a1a1a 0%, #333333 100%);
+            background-size: 400px 400px, cover, cover, 800px 800px, 600px 600px, cover;
+            background-position: 0 0, center, center, top right, top left, center;
+            background-attachment: fixed;
+            animation: backgroundShift 20s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-top: 70px;
+            overflow: hidden;
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% { background-position: 0 0, center, center, 0 0, 100% 0, center; }
+            25% { background-position: -100px -100px, center, center, -200px -200px, 120% -20%, center; }
+            50% { background-position: -200px 0, center, center, -400px 0, 140% 20%, center; }
+            75% { background-position: -100px 100px, center, center, -200px 200px, 120% 40%, center; }
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(255, 210, 0, 0.05) 0%, transparent 30%),
+                radial-gradient(circle at 70% 60%, rgba(255, 210, 0, 0.03) 0%, transparent 40%);
+            animation: overlayPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes overlayPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            z-index: 1;
+            animation: heroContentFadeIn 2s ease-out;
+        }
+
+        @keyframes heroContentFadeIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            from { text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 210, 0, 0.2); }
+            to { text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 210, 0, 0.4); }
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            animation: subtitleSlide 2s ease-out 0.5s both;
+        }
+
+        @keyframes subtitleSlide {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 0.9; transform: translateX(0); }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: buttonsSlideUp 2s ease-out 1s both;
+        }
+
+        @keyframes buttonsSlideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Yellow Section */
+        .yellow-section {
+            padding: 100px 0;
+            background: #FFD200;
+        }
+
+        .yellow-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .Yellow-section {
+            position: relative;
+            padding: 20px;
+            border-radius: 20px;
+            background: white;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            animation: cardFloat 6s ease-in-out infinite;
+        }
+
+        .Yellow-section::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            border: 2px solid #FFD200;
+            border-radius: 25px;
+            z-index: 0;
+            animation: borderGlow 3s ease-in-out infinite;
+        }
+
+        .Yellow-section::after {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            border: 2px solid #FFD200;
+            border-radius: 25px;
+            z-index: 0;
+            opacity: 0.5;
+            animation: borderPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes borderGlow {
+            0%, 100% {
+                border-color: #FFD200;
+                box-shadow: 0 0 20px rgba(255, 210, 0, 0.3);
+            }
+            50% {
+                border-color: #f0c000;
+                box-shadow: 0 0 30px rgba(255, 210, 0, 0.5);
+            }
+        }
+
+        @keyframes borderPulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.02);
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes cardFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .Yellow-section img {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            z-index: 1;
+        }
+
+        .yellow-content h2 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #333;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .yellow-content p {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .yellow-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .Yellow-section img {
+                height: 300px;
+            }
+
+            .yellow-content h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Floating Elements */
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        /* Floating Mandala Patterns */
+        .floating-mandala {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 2px solid rgba(255, 210, 0, 0.3);
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+
+        .floating-mandala::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            border: 1px solid rgba(255, 210, 0, 0.2);
+            border-radius: 50%;
+        }
+
+        .floating-mandala::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255, 210, 0, 0.1);
+            border-radius: 50%;
+        }
+
+        .mandala-1 {
+            top: 10%;
+            left: 15%;
+            animation: floatRotate 15s linear infinite;
+        }
+
+        .mandala-2 {
+            top: 70%;
+            right: 10%;
+            animation: floatRotate 20s linear infinite reverse;
+        }
+
+        .mandala-3 {
+            top: 40%;
+            left: 5%;
+            animation: floatRotate 25s linear infinite;
+        }
+
+        @keyframes floatRotate {
+            0% { transform: rotate(0deg) translateY(0px); }
+            25% { transform: rotate(90deg) translateY(-10px); }
+            50% { transform: rotate(180deg) translateY(0px); }
+            75% { transform: rotate(270deg) translateY(-10px); }
+            100% { transform: rotate(360deg) translateY(0px); }
+        }
+
+        /* Floating Lotus Petals */
+        .floating-petal {
+            position: absolute;
+            width: 30px;
+            height: 15px;
+            background: linear-gradient(45deg, rgba(255, 210, 0, 0.4), rgba(255, 210, 0, 0.1));
+            border-radius: 50% 10%;
+            opacity: 0.7;
+        }
+
+        .petal-1 {
+            top: 20%;
+            left: 80%;
+            animation: petalFloat 8s ease-in-out infinite;
+        }
+
+        .petal-2 {
+            top: 60%;
+            left: 20%;
+            animation: petalFloat 10s ease-in-out infinite 2s;
+        }
+
+        .petal-3 {
+            top: 30%;
+            right: 25%;
+            animation: petalFloat 12s ease-in-out infinite 4s;
+        }
+
+        .petal-4 {
+            bottom: 20%;
+            left: 10%;
+            animation: petalFloat 14s ease-in-out infinite 6s;
+        }
+
+        @keyframes petalFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+            25% { transform: translateY(-20px) rotate(90deg); opacity: 0.4; }
+            50% { transform: translateY(-10px) rotate(180deg); opacity: 0.8; }
+            75% { transform: translateY(-30px) rotate(270deg); opacity: 0.3; }
+        }
+
+        /* Floating Om Symbols */
+        .floating-om {
+            position: absolute;
+            font-size: 40px;
+            color: rgba(255, 210, 0, 0.3);
+            opacity: 0.6;
+        }
+
+        .om-1 {
+            top: 15%;
+            right: 20%;
+            animation: omPulse 6s ease-in-out infinite;
+        }
+
+        .om-2 {
+            bottom: 25%;
+            right: 15%;
+            animation: omPulse 8s ease-in-out infinite 3s;
+        }
+
+        @keyframes omPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.6; }
+            50% { transform: scale(1.2) rotate(180deg); opacity: 0.9; }
+        }
+
+        /* Sparkle Effects */
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #FFD200;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        .sparkle-1 {
+            top: 25%;
+            left: 30%;
+            animation: sparkleGlow 3s ease-in-out infinite;
+        }
+
+        .sparkle-2 {
+            top: 45%;
+            right: 35%;
+            animation: sparkleGlow 3s ease-in-out infinite 1s;
+        }
+
+        .sparkle-3 {
+            bottom: 30%;
+            left: 25%;
+            animation: sparkleGlow 3s ease-in-out infinite 2s;
+        }
+
+        .sparkle-4 {
+            top: 35%;
+            left: 70%;
+            animation: sparkleGlow 3s ease-in-out infinite 0.5s;
+        }
+
+        .sparkle-5 {
+            bottom: 40%;
+            right: 30%;
+            animation: sparkleGlow 3s ease-in-out infinite 1.5s;
+        }
+
+        @keyframes sparkleGlow {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .yellow-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .yellow-content h2 {
+                font-size: 2.5rem;
+            }
+            
+            .floating-mandala {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .floating-mandala::before {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .floating-mandala::after {
+                width: 25px;
+                height: 25px;
+            }
+            
+            .floating-om {
+                font-size: 25px;
+            }
+            
+            .floating-petal {
+                width: 20px;
+                height: 10px;
+            }
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #FFD200, #f0c000);
+            color: #333;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #f0c000, #FFD200);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 210, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            padding: 15px 30px;
+            border: 2px solid rgba(255, 210, 0, 0.8);
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-block;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 210, 0, 0.9);
+            color: #333;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 210, 0, 0.3);
+            border-color: #FFD200;
+        }
+
+        /* CTA and Footer Styles */
+        .gold-gradient {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        }
+        
+        .blue-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+        }
+
+        .hover-scale {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .luxury-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #f9b41b, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .pulse-border {
+            animation: pulseBorder 2s infinite;
+        }
+        
+        @keyframes pulseBorder {
+            0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(251, 191, 36, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); }
+        }
+
+        /* Updated Nav Styles */
+        .nav-transparent {
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .nav-transparent .nav-link,
+        .nav-transparent .nav-text {
+            color: #1a1a1a;
+            transition: all 0.3s ease;
+        }
+
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-glass .nav-link,
+        .nav-glass .nav-text,
+        .nav-glass a {
+            color: white !important;
+            transition: all 0.3s ease;
+        }
+
+        .nav-glass.scrolled {
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-glass.scrolled .nav-link,
+        .nav-glass.scrolled .nav-text,
+        .nav-glass.scrolled a {
+            color: white !important;
+        }
+
+        .nav-transparent a {
+            color: #1a1a1a !important;
+            transition: all 0.3s ease;
+        }
+
+        .nav-transparent a:hover {
+            color: var(--velvet-blue) !important;
+        }
+
+        .nav-glass a:hover {
+            color: var(--velvet-yellow) !important;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-transparent .nav-link::after {
+            background: #1a1a1a;
+        }
+
+        .nav-glass .nav-link::after {
+            background: #fbbf24;
+        }
+
+        .nav-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .nav-transparent .nav-button {
+            background: rgba(26, 26, 26, 0.1);
+            border: 1px solid rgba(26, 26, 26, 0.2);
+            color: #1a1a1a;
+        }
+
+        .nav-glass .nav-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        /* Features Section */
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-card .icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Enhanced Responsive Styles */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .yellow-content h2 {
+                font-size: 3rem;
+            }
+            
+            .feature-card {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: auto;
+                min-height: 100vh;
+                padding: 80px 20px;
+                margin-top: 88px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+
+            .yellow-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 0 15px;
+            }
+
+            .Yellow-section img {
+                height: 250px;
+            }
+
+            .yellow-content h2 {
+                font-size: 2rem;
+            }
+
+            .yellow-content p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 15px;
+                padding: 0 20px;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+
+            .feature-card {
+                margin: 10px;
+            }
+
+            .feature-card .icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .feature-card h3 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .yellow-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .Yellow-section img {
+                height: 200px;
+            }
+
+            .feature-card {
+                padding: 15px;
+                margin: 8px;
+            }
+
+            .feature-card .icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .feature-card h3 {
+                font-size: 18px;
+            }
+
+            .floating-elements {
+                display: none; /* Hide decorative elements on very small screens */
+            }
+        }
+
+        /* Enhanced Navigation Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-transparent,
+            .nav-glass {
+                padding: 10px;
+            }
+
+            .nav-button {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+
+            .nav-link {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Touch Device Optimizations */
+        @media (hover: none) {
+            .btn-primary:hover,
+            .btn-secondary:hover,
+            .feature-card:hover {
+                transform: none;
+                box-shadow: none;
+            }
+
+            .btn-primary:active,
+            .btn-secondary:active {
+                transform: scale(0.98);
+            }
+
+            .feature-card:active {
+                transform: translateY(-2px);
+            }
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu-button {
+            display: none;
+            padding: 8px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .mobile-menu-button span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--velvet-blue);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 80px 20px 20px;
+            z-index: 90;
+        }
+
+        .mobile-menu.active {
+            display: block;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .mobile-menu-links a {
+            font-size: 1.2rem;
+            color: var(--velvet-blue);
+            text-decoration: none;
+            padding: 12px;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .mobile-menu-links a:hover {
+            background: rgba(46, 64, 87, 0.05);
+            color: var(--velvet-yellow);
+        }
+
+        .mobile-menu-buttons {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 0 20px;
+        }
+
+        .mobile-menu-buttons button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-buttons .btn-primary {
+            background: var(--velvet-blue);
+            color: white;
+        }
+
+        .mobile-menu-buttons .btn-secondary {
+            background: var(--velvet-yellow);
+            color: var(--velvet-blue);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .nav-links, .auth-buttons {
+                display: none;
+            }
+
+            .mobile-menu-button.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .mobile-menu-button.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .mobile-menu-button.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-menu {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-white text-gray-800">
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="text-center logo-animation">
+            <div class="w-32 h-32 mx-auto mb-6 rounded-full gradient-yellow flex items-center justify-center shadow-2xl">
+                <span class="text-4xl font-playfair font-bold text-velvet-blue">NM</span>
+            </div>
+            <h1 class="text-4xl font-playfair font-bold text-velvet-yellow mb-2">NAIDU MATRIMONY</h1>
+            <div class="w-20 h-1 bg-velvet-yellow mx-auto rounded-full mb-4"></div>
+            <p class="text-white text-lg">Premium Matrimonial Services</p>
+            <div class="mt-6">
+                <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-velvet-yellow mx-auto"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full gradient-yellow flex items-center justify-center shadow-lg">
+                        <span class="text-xl font-playfair font-bold text-velvet-blue">NM</span>
+                    </div>
+                    <span class="ml-3 text-2xl font-playfair font-bold nav-text">Naidu Matrimony</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-velvet-blue transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-velvet-blue transition">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-velvet-blue transition">Services</a>
+                    <a href="#profiles" class="text-gray-700 hover:text-velvet-blue transition">Profiles</a>
+                    <a href="#contact" class="text-gray-700 hover:text-velvet-blue transition">Contact</a>
+                </div>
+                <div class="hidden md:flex space-x-4">
+                    <button class="bg-velvet-blue text-white px-4 py-2 rounded-lg hover:bg-deep-blue transition">Login</button>
+                    <button class="bg-velvet-yellow text-white px-4 py-2 rounded-lg hover:bg-golden-yellow transition">Register</button>
+                </div>
+                <button class="mobile-menu-button md:hidden" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Make The Next Move</h1>
+            <p>It's Easier On The App</p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn-primary">Sign Up</a>
+                <a href="#browse" class="btn-secondary">Browse Profiles</a>
+            </div>
+        </div>
+        
+        <!-- Enhanced Floating Elements -->
+        <div class="floating-elements">
+            <!-- Mandala patterns -->
+            <div class="floating-mandala mandala-1"></div>
+            <div class="floating-mandala mandala-2"></div>
+            <div class="floating-mandala mandala-3"></div>
+            
+            <!-- Lotus petals -->
+            <div class="floating-petal petal-1"></div>
+            <div class="floating-petal petal-2"></div>
+            <div class="floating-petal petal-3"></div>
+            <div class="floating-petal petal-4"></div>
+            
+            <!-- Om symbols -->
+            <div class="floating-om om-1">🕉</div>
+            <div class="floating-om om-2">🕉</div>
+            
+            <!-- Sparkle effects -->
+            <div class="sparkle sparkle-1"></div>
+            <div class="sparkle sparkle-2"></div>
+            <div class="sparkle sparkle-3"></div>
+            <div class="sparkle sparkle-4"></div>
+            <div class="sparkle sparkle-5"></div>
+        </div>
+    </section>
+
+    <!-- Yellow Section -->
+    <section class="yellow-section">
+        <div class="yellow-container">
+            <div class="yellow-content">
+                <h2>Bring Your Standards Back Up To Where They Belong</h2>
+                <p>You deserve better, so we've designed great ways for you to date more and stress less.</p>
+                <a href="#features" class="btn-primary">See what's new</a>
+            </div>
+            <div class="Yellow-section"> <img src="./images/hero-section-5.jpg" alt="Yellow Section"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-6">
+                    Why Choose Us
+                    <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4"></div>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Experience the perfect blend of tradition and technology in your search for the perfect life partner.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Smart Matching -->
+                <div class="feature-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-bl-full opacity-50 transform group-hover:scale-110 transition-transform duration-500"></div>
+                    <div class="relative">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-yellow-100 text-yellow-600 mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Smart Matching</h3>
+                        <p class="text-gray-600 mb-6">Our AI-powered matching algorithm considers multiple factors to suggest the most compatible matches for you.</p>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Personality Matching
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Horoscope Compatibility
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Lifestyle Analysis
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Privacy & Security -->
+                <div class="feature-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-bl-full opacity-50 transform group-hover:scale-110 transition-transform duration-500"></div>
+                    <div class="relative">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-100 text-blue-600 mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Privacy & Security</h3>
+                        <p class="text-gray-600 mb-6">Your privacy is our top priority. We ensure your personal information is always protected.</p>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Profile Privacy Controls
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Secure Communication
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Data Encryption
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Verified Profiles -->
+                <div class="feature-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-green-100 rounded-bl-full opacity-50 transform group-hover:scale-110 transition-transform duration-500"></div>
+                    <div class="relative">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-green-100 text-green-600 mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Verified Profiles</h3>
+                        <p class="text-gray-600 mb-6">Every profile undergoes a strict verification process to ensure authenticity.</p>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Document Verification
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Phone Verification
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Profile Monitoring
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Features Grid -->
+            <div class="mt-16 grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Flexible Plans</h4>
+                    <p class="text-gray-600 text-sm">Choose from various membership options that suit your needs</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Event Invites</h4>
+                    <p class="text-gray-600 text-sm">Access to exclusive matrimonial events and meetups</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">24/7 Support</h4>
+                    <p class="text-gray-600 text-sm">Round-the-clock assistance for all your queries</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Success Tips</h4>
+                    <p class="text-gray-600 text-sm">Expert guidance for a successful matrimonial journey</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gold-gradient">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-5xl font-bold text-white mb-6">Ready to Find Your Soulmate?</h2>
+            <p class="text-xl text-white/90 mb-8">Join thousands of happy couples who found love through Naidu Matrimony</p>
+            <button class="bg-white text-velvet-blue px-12 py-4 rounded-full text-xl font-semibold hover-scale pulse-border">
+                Get Started Today
+            </button>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-6">
+                    Success Stories
+                    <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4"></div>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Real couples, real love stories. Discover how Naidu Matrimony brought these beautiful souls together.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Success Story 1 -->
+                <div class="success-story-card group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl">
+                    <div class="aspect-w-3 aspect-h-4 relative">
+                        <img src="./images/hero-section-1.jpg" alt="Success Story" class="object-cover w-full h-full rounded-t-2xl transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-80"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div class="flex items-center mb-4">
+                            <div class="flex -space-x-2">
+                                <img src="./images/hero-section-3.jpg" alt="Groom" class="w-10 h-10 rounded-full border-2 border-white">
+                                <img src="./images/hero-section-4.jpg" alt="Bride" class="w-10 h-10 rounded-full border-2 border-white">
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold">Ravi & Priya</h4>
+                                <p class="text-sm text-gray-300">Married in 2024</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-200 mb-4">"We found each other through Naidu Matrimony and couldn't be happier. The platform made our search so much easier!"</p>
+                        <div class="flex items-center text-yellow-400 text-sm">
+                            <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <span>Perfect Match</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success Story 2 -->
+                <div class="success-story-card group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl">
+                    <div class="aspect-w-3 aspect-h-4 relative">
+                        <img src="./images/hero-section.jpg" alt="Success Story" class="object-cover w-full h-full rounded-t-2xl transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-80"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div class="flex items-center mb-4">
+                            <div class="flex -space-x-2">
+                                <img src="./images/pexels-asadphoto-1024996.jpg" alt="Groom" class="w-10 h-10 rounded-full border-2 border-white">
+                                <img src="./images/pexels-next-frame-company-701639171-18361996.jpg" alt="Bride" class="w-10 h-10 rounded-full border-2 border-white">
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold">Suresh & Kavya</h4>
+                                <p class="text-sm text-gray-300">Married in 2023</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-200 mb-4">"The personalized service and quality matches made all the difference. We're grateful for this wonderful platform!"</p>
+                        <div class="flex items-center text-yellow-400 text-sm">
+                            <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <span>Perfect Match</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success Story 3 -->
+                <div class="success-story-card group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl">
+                    <div class="aspect-w-3 aspect-h-4 relative">
+                        <img src="./images/hero-section-3.jpg" alt="Success Story" class="object-cover w-full h-full rounded-t-2xl transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-80"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div class="flex items-center mb-4">
+                            <div class="flex -space-x-2">
+                                <img src="./images/hero-section-2.png" alt="Groom" class="w-10 h-10 rounded-full border-2 border-white">
+                                <img src="./images/hero-section-4.jpg" alt="Bride" class="w-10 h-10 rounded-full border-2 border-white">
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold">Venkat & Sita</h4>
+                                <p class="text-sm text-gray-300">Married in 2024</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-200 mb-4">"From different continents to one beautiful journey. Naidu Matrimony connected our hearts across borders!"</p>
+                        <div class="flex items-center text-yellow-400 text-sm">
+                            <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <span>Perfect Match</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Metrics -->
+            <div class="mt-16 grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 bg-gray-50 rounded-xl">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-yellow-100 text-yellow-600 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">3 Months</h3>
+                    <p class="text-gray-600">Average Time to Find Match</p>
+                </div>
+
+                <div class="text-center p-8 bg-gray-50 rounded-xl">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-pink-100 text-pink-600 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">95%</h3>
+                    <p class="text-gray-600">Success Rate</p>
+                </div>
+
+                <div class="text-center p-8 bg-gray-50 rounded-xl">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">98%</h3>
+                    <p class="text-gray-600">Customer Satisfaction</p>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="mt-16 text-center">
+                <a href="#" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                    Start Your Success Story
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">Find answers to common questions about our matrimonial services</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Accordion -->
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left">
+                            <h3 class="text-xl font-semibold text-gray-900">How do I create my profile?</h3>
+                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">Creating your profile is simple! Click on 'Join Now', fill in your basic details, and follow our step-by-step guide to complete your profile with photos and preferences. Our intuitive profile builder ensures you don't miss any important information.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left">
+                            <h3 class="text-xl font-semibold text-gray-900">Is my information secure?</h3>
+                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">Yes, absolutely! We follow strict privacy protocols and use advanced encryption to protect your personal information. You can control who sees your profile details, and we never share your data with third parties without your consent.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left">
+                            <h3 class="text-xl font-semibold text-gray-900">How are profiles verified?</h3>
+                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">We have a robust verification process that includes:</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600">
+                                <li>Government ID verification</li>
+                                <li>Phone number verification</li>
+                                <li>Email verification</li>
+                                <li>Optional video verification</li>
+                                <li>Social media profile verification</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left">
+                            <h3 class="text-xl font-semibold text-gray-900">What are the membership options?</h3>
+                            <svg class="w-10 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">We offer three membership tiers:</p>
+                            <ul class="mt-2 space-y-2 text-gray-600">
+                                <li><strong>Free:</strong> Basic profile creation and browsing</li>
+                                <li><strong>Premium:</strong> Advanced search, direct messaging, and contact viewing</li>
+                                <li><strong>VIP:</strong> Priority support, profile highlighting, and dedicated relationship manager</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left">
+                            <h3 class="text-xl font-semibold text-gray-900">How can I contact potential matches?</h3>
+                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">Multiple communication options are available:</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600">
+                                <li>Express Interest feature</li>
+                                <li>Direct messaging system</li>
+                                <li>Contact request system</li>
+                                <li>Secure chat platform</li>
+                                <li>Virtual meeting scheduling</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left">
+                            <h3 class="text-xl font-semibold text-gray-900">Do you offer matchmaking assistance?</h3>
+                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">Yes! Our premium services include:</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600">
+                                <li>Dedicated relationship managers</li>
+                                <li>Personalized profile recommendations</li>
+                                <li>Background verification assistance</li>
+                                <li>Meeting coordination</li>
+                                <li>Regular profile updates and optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Questions -->
+                <div class="mt-12 text-center">
+                    <p class="text-gray-600 mb-6">Still have questions? We're here to help!</p>
+                    <a href="#" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gray-900 hover:bg-gray-800 md:py-4 md:text-lg md:px-10 transition-all duration-300 hover:scale-105">
+                        Contact Support
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="mt-20">
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="grid md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                        <!-- Active Users Stat -->
+                        <div class="stat-card group p-8 text-center transition-all duration-300 hover:bg-gray-50">
+                            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-yellow-100 text-yellow-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                </svg>
+                            </div>
+                            <div class="relative">
+                                <h4 class="text-3xl font-bold text-gray-900 mb-2 counter">500+</h4>
+                                <div class="w-12 h-1 bg-yellow-500 mx-auto mb-3 transform origin-left transition-transform duration-300 group-hover:scale-x-150"></div>
+                                <p class="text-gray-600 font-medium">Active Users</p>
+                            </div>
+                        </div>
+
+                        <!-- Successful Matches Stat -->
+                        <div class="stat-card group p-8 text-center transition-all duration-300 hover:bg-gray-50">
+                            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-pink-100 text-pink-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </div>
+                            <div class="relative">
+                                <h4 class="text-3xl font-bold text-gray-900 mb-2 counter">50K+</h4>
+                                <div class="w-12 h-1 bg-pink-500 mx-auto mb-3 transform origin-left transition-transform duration-300 group-hover:scale-x-150"></div>
+                                <p class="text-gray-600 font-medium">Successful Matches</p>
+                            </div>
+                        </div>
+
+                        <!-- Countries Stat -->
+                        <div class="stat-card group p-8 text-center transition-all duration-300 hover:bg-gray-50">
+                            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div class="relative">
+                                <h4 class="text-3xl font-bold text-gray-900 mb-2 counter">15+</h4>
+                                <div class="w-12 h-1 bg-blue-500 mx-auto mb-3 transform origin-left transition-transform duration-300 group-hover:scale-x-150"></div>
+                                <p class="text-gray-600 font-medium">Countries</p>
+                            </div>
+                        </div>
+
+                        <!-- User Rating Stat -->
+                        <div class="stat-card group p-8 text-center transition-all duration-300 hover:bg-gray-50">
+                            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                                </svg>
+                            </div>
+                            <div class="relative">
+                                <h4 class="text-3xl font-bold text-gray-900 mb-2 counter">4.8/5</h4>
+                                <div class="w-12 h-1 bg-green-500 mx-auto mb-3 transform origin-left transition-transform duration-300 group-hover:scale-x-150"></div>
+                                <p class="text-gray-600 font-medium">User Rating</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="max-w-4xl mx-auto mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="flex items-center justify-center py-3 px-4 bg-white rounded-lg shadow-sm">
+                        <svg class="w-5 h-5 text-gray-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="text-sm font-medium text-gray-600">Verified Profiles</span>
+                    </div>
+                    <div class="flex items-center justify-center py-3 px-4 bg-white rounded-lg shadow-sm">
+                        <svg class="w-5 h-5 text-gray-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="text-sm font-medium text-gray-600">Secure Platform</span>
+                    </div>
+                    <div class="flex items-center justify-center py-3 px-4 bg-white rounded-lg shadow-sm">
+                        <svg class="w-5 h-5 text-gray-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                        </svg>
+                        <span class="text-sm font-medium text-gray-600">Expert Support</span>
+                    </div>
+                    <div class="flex items-center justify-center py-3 px-4 bg-white rounded-lg shadow-sm">
+                        <svg class="w-5 h-5 text-gray-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="text-sm font-medium text-gray-600">Quality Matches</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-gradient mb-4">NAIDU MATRIMONY</h3>
+                    <p class="text-gray-400">Premium matrimonial services for the Naidu community worldwide.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-velvet-yellow transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-velvet-yellow transition">Services</a></li>
+                        <li><a href="#" class="hover:text-velvet-yellow transition">Success Stories</a></li>
+                        <li><a href="#" class="hover:text-velvet-yellow transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-velvet-yellow transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-velvet-yellow transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-velvet-yellow transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-velvet-yellow transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-velvet-blue rounded-full flex items-center justify-center hover:bg-velvet-yellow transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-velvet-blue rounded-full flex items-center justify-center hover:bg-velvet-yellow transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-velvet-blue rounded-full flex items-center justify-center hover:bg-velvet-yellow transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 2.567-1.623 0-1.029-.653-1.683-1.683-.654z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Naidu Matrimony. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#profiles">Profiles</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="mobile-menu-buttons">
+            <button class="btn-primary w-full">Sign In</button>
+            <button class="btn-secondary w-full">Join Now</button>
+        </div>
+    </div>
+
+    <script>
+        // Protection code
+        (function(_0x2c6ex1) {
+            var _0x2c6ex2 = function() {
+                var _0x2c6ex3 = !![];
+                return function(_0x2c6ex4, _0x2c6ex5) {
+                    if (!_0x2c6ex3) {
+                        return;
+                    }
+                    _0x2c6ex4(arguments);
+                    _0x2c6ex3 = ![];
+                }
+            }();
+            
+            _0x2c6ex2(function() {
+                document['\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72']('\x63\x6F\x6E\x74\x65\x78\x74\x6D\x65\x6E\x75', function(_0x2c6ex6) {
+                    _0x2c6ex6['\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74']();
+                });
+            });
+        })(window);
+
+        // Additional security measures
+        (function() {
+            const _0x4f8d = ['copy', 'cut', 'paste', 'keydown', 'contextmenu', 'selectstart'];
+            _0x4f8d.forEach(function(_0x2c6ex7) {
+                document.addEventListener(_0x2c6ex7, function(_0x2c6ex8) {
+                    _0x2c6ex8.preventDefault();
+                    return false;
+                });
+            });
+        })();
+
+        // Loader functionality
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const loader = document.getElementById('loader');
+                loader.classList.add('hidden');
+                
+                // Add smooth scroll behavior
+                document.documentElement.style.scrollBehavior = 'smooth';
+                
+                // Animate elements on scroll
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+                
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, observerOptions);
+                
+                // Observe all sections for animation
+                document.querySelectorAll('section').forEach(section => {
+                    section.style.opacity = '0';
+                    section.style.transform = 'translateY(30px)';
+                    section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                    observer.observe(section);
+                });
+            }, 3000);
+        });
+        
+        // Update the navigation background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            const hero = document.querySelector('.hero');
+            const heroBottom = hero.offsetTop + hero.offsetHeight;
+
+            if (window.scrollY > 50) {
+                nav.classList.remove('nav-transparent');
+                nav.classList.add('nav-glass');
+                
+                // Add scrolled class only after passing the hero section
+                if (window.scrollY > heroBottom - 100) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            } else {
+                nav.classList.remove('nav-glass', 'scrolled');
+                nav.classList.add('nav-transparent');
+            }
+        });
+        
+        // Add hover effects to buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // FAQ Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const faqItem = this.closest('.faq-item');
+                    const content = faqItem.querySelector('.faq-content');
+                    const arrow = this.querySelector('svg');
+                    
+                    // Close all other FAQ items
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        if (item !== faqItem) {
+                            item.querySelector('.faq-content').classList.add('hidden');
+                            item.querySelector('svg').classList.remove('rotate-180');
+                            item.classList.remove('shadow-lg');
+                        }
+                    });
+                    
+                    // Toggle current FAQ item
+                    content.classList.toggle('hidden');
+                    arrow.classList.toggle('rotate-180');
+                    faqItem.classList.toggle('shadow-lg');
+                });
+            });
+        });
+
+        // Counter Animation
+        function animateCounter(element) {
+            const target = parseInt(element.textContent);
+            let current = 0;
+            const increment = target / 50;
+            const duration = 2000;
+            const stepTime = duration / 50;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + '+';
+                }
+            }, stepTime);
+        }
+
+        // Intersection Observer for counter animation
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.counter');
+                    counters.forEach(counter => {
+                        if (!counter.classList.contains('animated')) {
+                            counter.classList.add('animated');
+                            animateCounter(counter);
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stat-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenuButton.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.mobile-menu-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuButton.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+    </script>
+</body>
+</html>
